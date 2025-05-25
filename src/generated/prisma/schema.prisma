@@ -17,8 +17,6 @@ datasource db {
 model Pembeli {
   id         Int          @id @default(autoincrement())
   username   String
-  password   String
-  email      String
   role       String
   pembayaran Pembayaran[]
   pesanan    Pesanan[]
@@ -27,8 +25,6 @@ model Pembeli {
 model Penjual {
   id       Int       @id
   username String
-  password String
-  email    String
   role     String
   pesanan  Pesanan[]
   produk   Produk[]

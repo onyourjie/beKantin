@@ -1488,24 +1488,18 @@ export namespace Prisma {
   export type PembeliMinAggregateOutputType = {
     id: number | null
     username: string | null
-    password: string | null
-    email: string | null
     role: string | null
   }
 
   export type PembeliMaxAggregateOutputType = {
     id: number | null
     username: string | null
-    password: string | null
-    email: string | null
     role: string | null
   }
 
   export type PembeliCountAggregateOutputType = {
     id: number
     username: number
-    password: number
-    email: number
     role: number
     _all: number
   }
@@ -1522,24 +1516,18 @@ export namespace Prisma {
   export type PembeliMinAggregateInputType = {
     id?: true
     username?: true
-    password?: true
-    email?: true
     role?: true
   }
 
   export type PembeliMaxAggregateInputType = {
     id?: true
     username?: true
-    password?: true
-    email?: true
     role?: true
   }
 
   export type PembeliCountAggregateInputType = {
     id?: true
     username?: true
-    password?: true
-    email?: true
     role?: true
     _all?: true
   }
@@ -1633,8 +1621,6 @@ export namespace Prisma {
   export type PembeliGroupByOutputType = {
     id: number
     username: string
-    password: string
-    email: string
     role: string
     _count: PembeliCountAggregateOutputType | null
     _avg: PembeliAvgAggregateOutputType | null
@@ -1660,8 +1646,6 @@ export namespace Prisma {
   export type PembeliSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     username?: boolean
-    password?: boolean
-    email?: boolean
     role?: boolean
     pembayaran?: boolean | Pembeli$pembayaranArgs<ExtArgs>
     pesanan?: boolean | Pembeli$pesananArgs<ExtArgs>
@@ -1671,28 +1655,22 @@ export namespace Prisma {
   export type PembeliSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     username?: boolean
-    password?: boolean
-    email?: boolean
     role?: boolean
   }, ExtArgs["result"]["pembeli"]>
 
   export type PembeliSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     username?: boolean
-    password?: boolean
-    email?: boolean
     role?: boolean
   }, ExtArgs["result"]["pembeli"]>
 
   export type PembeliSelectScalar = {
     id?: boolean
     username?: boolean
-    password?: boolean
-    email?: boolean
     role?: boolean
   }
 
-  export type PembeliOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "username" | "password" | "email" | "role", ExtArgs["result"]["pembeli"]>
+  export type PembeliOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "username" | "role", ExtArgs["result"]["pembeli"]>
   export type PembeliInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     pembayaran?: boolean | Pembeli$pembayaranArgs<ExtArgs>
     pesanan?: boolean | Pembeli$pesananArgs<ExtArgs>
@@ -1710,8 +1688,6 @@ export namespace Prisma {
     scalars: $Extensions.GetPayloadResult<{
       id: number
       username: string
-      password: string
-      email: string
       role: string
     }, ExtArgs["result"]["pembeli"]>
     composites: {}
@@ -2140,8 +2116,6 @@ export namespace Prisma {
   interface PembeliFieldRefs {
     readonly id: FieldRef<"Pembeli", 'Int'>
     readonly username: FieldRef<"Pembeli", 'String'>
-    readonly password: FieldRef<"Pembeli", 'String'>
-    readonly email: FieldRef<"Pembeli", 'String'>
     readonly role: FieldRef<"Pembeli", 'String'>
   }
     
@@ -2620,24 +2594,18 @@ export namespace Prisma {
   export type PenjualMinAggregateOutputType = {
     id: number | null
     username: string | null
-    password: string | null
-    email: string | null
     role: string | null
   }
 
   export type PenjualMaxAggregateOutputType = {
     id: number | null
     username: string | null
-    password: string | null
-    email: string | null
     role: string | null
   }
 
   export type PenjualCountAggregateOutputType = {
     id: number
     username: number
-    password: number
-    email: number
     role: number
     _all: number
   }
@@ -2654,24 +2622,18 @@ export namespace Prisma {
   export type PenjualMinAggregateInputType = {
     id?: true
     username?: true
-    password?: true
-    email?: true
     role?: true
   }
 
   export type PenjualMaxAggregateInputType = {
     id?: true
     username?: true
-    password?: true
-    email?: true
     role?: true
   }
 
   export type PenjualCountAggregateInputType = {
     id?: true
     username?: true
-    password?: true
-    email?: true
     role?: true
     _all?: true
   }
@@ -2765,8 +2727,6 @@ export namespace Prisma {
   export type PenjualGroupByOutputType = {
     id: number
     username: string
-    password: string
-    email: string
     role: string
     _count: PenjualCountAggregateOutputType | null
     _avg: PenjualAvgAggregateOutputType | null
@@ -2792,8 +2752,6 @@ export namespace Prisma {
   export type PenjualSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     username?: boolean
-    password?: boolean
-    email?: boolean
     role?: boolean
     pesanan?: boolean | Penjual$pesananArgs<ExtArgs>
     produk?: boolean | Penjual$produkArgs<ExtArgs>
@@ -2803,28 +2761,22 @@ export namespace Prisma {
   export type PenjualSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     username?: boolean
-    password?: boolean
-    email?: boolean
     role?: boolean
   }, ExtArgs["result"]["penjual"]>
 
   export type PenjualSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     username?: boolean
-    password?: boolean
-    email?: boolean
     role?: boolean
   }, ExtArgs["result"]["penjual"]>
 
   export type PenjualSelectScalar = {
     id?: boolean
     username?: boolean
-    password?: boolean
-    email?: boolean
     role?: boolean
   }
 
-  export type PenjualOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "username" | "password" | "email" | "role", ExtArgs["result"]["penjual"]>
+  export type PenjualOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "username" | "role", ExtArgs["result"]["penjual"]>
   export type PenjualInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     pesanan?: boolean | Penjual$pesananArgs<ExtArgs>
     produk?: boolean | Penjual$produkArgs<ExtArgs>
@@ -2842,8 +2794,6 @@ export namespace Prisma {
     scalars: $Extensions.GetPayloadResult<{
       id: number
       username: string
-      password: string
-      email: string
       role: string
     }, ExtArgs["result"]["penjual"]>
     composites: {}
@@ -3272,8 +3222,6 @@ export namespace Prisma {
   interface PenjualFieldRefs {
     readonly id: FieldRef<"Penjual", 'Int'>
     readonly username: FieldRef<"Penjual", 'String'>
-    readonly password: FieldRef<"Penjual", 'String'>
-    readonly email: FieldRef<"Penjual", 'String'>
     readonly role: FieldRef<"Penjual", 'String'>
   }
     
@@ -8205,8 +8153,6 @@ export namespace Prisma {
   export const PembeliScalarFieldEnum: {
     id: 'id',
     username: 'username',
-    password: 'password',
-    email: 'email',
     role: 'role'
   };
 
@@ -8216,8 +8162,6 @@ export namespace Prisma {
   export const PenjualScalarFieldEnum: {
     id: 'id',
     username: 'username',
-    password: 'password',
-    email: 'email',
     role: 'role'
   };
 
@@ -8360,8 +8304,6 @@ export namespace Prisma {
     NOT?: PembeliWhereInput | PembeliWhereInput[]
     id?: IntFilter<"Pembeli"> | number
     username?: StringFilter<"Pembeli"> | string
-    password?: StringFilter<"Pembeli"> | string
-    email?: StringFilter<"Pembeli"> | string
     role?: StringFilter<"Pembeli"> | string
     pembayaran?: PembayaranListRelationFilter
     pesanan?: PesananListRelationFilter
@@ -8370,8 +8312,6 @@ export namespace Prisma {
   export type PembeliOrderByWithRelationInput = {
     id?: SortOrder
     username?: SortOrder
-    password?: SortOrder
-    email?: SortOrder
     role?: SortOrder
     pembayaran?: PembayaranOrderByRelationAggregateInput
     pesanan?: PesananOrderByRelationAggregateInput
@@ -8383,8 +8323,6 @@ export namespace Prisma {
     OR?: PembeliWhereInput[]
     NOT?: PembeliWhereInput | PembeliWhereInput[]
     username?: StringFilter<"Pembeli"> | string
-    password?: StringFilter<"Pembeli"> | string
-    email?: StringFilter<"Pembeli"> | string
     role?: StringFilter<"Pembeli"> | string
     pembayaran?: PembayaranListRelationFilter
     pesanan?: PesananListRelationFilter
@@ -8393,8 +8331,6 @@ export namespace Prisma {
   export type PembeliOrderByWithAggregationInput = {
     id?: SortOrder
     username?: SortOrder
-    password?: SortOrder
-    email?: SortOrder
     role?: SortOrder
     _count?: PembeliCountOrderByAggregateInput
     _avg?: PembeliAvgOrderByAggregateInput
@@ -8409,8 +8345,6 @@ export namespace Prisma {
     NOT?: PembeliScalarWhereWithAggregatesInput | PembeliScalarWhereWithAggregatesInput[]
     id?: IntWithAggregatesFilter<"Pembeli"> | number
     username?: StringWithAggregatesFilter<"Pembeli"> | string
-    password?: StringWithAggregatesFilter<"Pembeli"> | string
-    email?: StringWithAggregatesFilter<"Pembeli"> | string
     role?: StringWithAggregatesFilter<"Pembeli"> | string
   }
 
@@ -8420,8 +8354,6 @@ export namespace Prisma {
     NOT?: PenjualWhereInput | PenjualWhereInput[]
     id?: IntFilter<"Penjual"> | number
     username?: StringFilter<"Penjual"> | string
-    password?: StringFilter<"Penjual"> | string
-    email?: StringFilter<"Penjual"> | string
     role?: StringFilter<"Penjual"> | string
     pesanan?: PesananListRelationFilter
     produk?: ProdukListRelationFilter
@@ -8430,8 +8362,6 @@ export namespace Prisma {
   export type PenjualOrderByWithRelationInput = {
     id?: SortOrder
     username?: SortOrder
-    password?: SortOrder
-    email?: SortOrder
     role?: SortOrder
     pesanan?: PesananOrderByRelationAggregateInput
     produk?: ProdukOrderByRelationAggregateInput
@@ -8443,8 +8373,6 @@ export namespace Prisma {
     OR?: PenjualWhereInput[]
     NOT?: PenjualWhereInput | PenjualWhereInput[]
     username?: StringFilter<"Penjual"> | string
-    password?: StringFilter<"Penjual"> | string
-    email?: StringFilter<"Penjual"> | string
     role?: StringFilter<"Penjual"> | string
     pesanan?: PesananListRelationFilter
     produk?: ProdukListRelationFilter
@@ -8453,8 +8381,6 @@ export namespace Prisma {
   export type PenjualOrderByWithAggregationInput = {
     id?: SortOrder
     username?: SortOrder
-    password?: SortOrder
-    email?: SortOrder
     role?: SortOrder
     _count?: PenjualCountOrderByAggregateInput
     _avg?: PenjualAvgOrderByAggregateInput
@@ -8469,8 +8395,6 @@ export namespace Prisma {
     NOT?: PenjualScalarWhereWithAggregatesInput | PenjualScalarWhereWithAggregatesInput[]
     id?: IntWithAggregatesFilter<"Penjual"> | number
     username?: StringWithAggregatesFilter<"Penjual"> | string
-    password?: StringWithAggregatesFilter<"Penjual"> | string
-    email?: StringWithAggregatesFilter<"Penjual"> | string
     role?: StringWithAggregatesFilter<"Penjual"> | string
   }
 
@@ -8712,8 +8636,6 @@ export namespace Prisma {
 
   export type PembeliCreateInput = {
     username: string
-    password: string
-    email: string
     role: string
     pembayaran?: PembayaranCreateNestedManyWithoutPembeliInput
     pesanan?: PesananCreateNestedManyWithoutPembeliInput
@@ -8722,8 +8644,6 @@ export namespace Prisma {
   export type PembeliUncheckedCreateInput = {
     id?: number
     username: string
-    password: string
-    email: string
     role: string
     pembayaran?: PembayaranUncheckedCreateNestedManyWithoutPembeliInput
     pesanan?: PesananUncheckedCreateNestedManyWithoutPembeliInput
@@ -8731,8 +8651,6 @@ export namespace Prisma {
 
   export type PembeliUpdateInput = {
     username?: StringFieldUpdateOperationsInput | string
-    password?: StringFieldUpdateOperationsInput | string
-    email?: StringFieldUpdateOperationsInput | string
     role?: StringFieldUpdateOperationsInput | string
     pembayaran?: PembayaranUpdateManyWithoutPembeliNestedInput
     pesanan?: PesananUpdateManyWithoutPembeliNestedInput
@@ -8741,8 +8659,6 @@ export namespace Prisma {
   export type PembeliUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
     username?: StringFieldUpdateOperationsInput | string
-    password?: StringFieldUpdateOperationsInput | string
-    email?: StringFieldUpdateOperationsInput | string
     role?: StringFieldUpdateOperationsInput | string
     pembayaran?: PembayaranUncheckedUpdateManyWithoutPembeliNestedInput
     pesanan?: PesananUncheckedUpdateManyWithoutPembeliNestedInput
@@ -8751,31 +8667,23 @@ export namespace Prisma {
   export type PembeliCreateManyInput = {
     id?: number
     username: string
-    password: string
-    email: string
     role: string
   }
 
   export type PembeliUpdateManyMutationInput = {
     username?: StringFieldUpdateOperationsInput | string
-    password?: StringFieldUpdateOperationsInput | string
-    email?: StringFieldUpdateOperationsInput | string
     role?: StringFieldUpdateOperationsInput | string
   }
 
   export type PembeliUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
     username?: StringFieldUpdateOperationsInput | string
-    password?: StringFieldUpdateOperationsInput | string
-    email?: StringFieldUpdateOperationsInput | string
     role?: StringFieldUpdateOperationsInput | string
   }
 
   export type PenjualCreateInput = {
     id: number
     username: string
-    password: string
-    email: string
     role: string
     pesanan?: PesananCreateNestedManyWithoutPenjualInput
     produk?: ProdukCreateNestedManyWithoutPenjualInput
@@ -8784,8 +8692,6 @@ export namespace Prisma {
   export type PenjualUncheckedCreateInput = {
     id: number
     username: string
-    password: string
-    email: string
     role: string
     pesanan?: PesananUncheckedCreateNestedManyWithoutPenjualInput
     produk?: ProdukUncheckedCreateNestedManyWithoutPenjualInput
@@ -8794,8 +8700,6 @@ export namespace Prisma {
   export type PenjualUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
     username?: StringFieldUpdateOperationsInput | string
-    password?: StringFieldUpdateOperationsInput | string
-    email?: StringFieldUpdateOperationsInput | string
     role?: StringFieldUpdateOperationsInput | string
     pesanan?: PesananUpdateManyWithoutPenjualNestedInput
     produk?: ProdukUpdateManyWithoutPenjualNestedInput
@@ -8804,8 +8708,6 @@ export namespace Prisma {
   export type PenjualUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
     username?: StringFieldUpdateOperationsInput | string
-    password?: StringFieldUpdateOperationsInput | string
-    email?: StringFieldUpdateOperationsInput | string
     role?: StringFieldUpdateOperationsInput | string
     pesanan?: PesananUncheckedUpdateManyWithoutPenjualNestedInput
     produk?: ProdukUncheckedUpdateManyWithoutPenjualNestedInput
@@ -8814,24 +8716,18 @@ export namespace Prisma {
   export type PenjualCreateManyInput = {
     id: number
     username: string
-    password: string
-    email: string
     role: string
   }
 
   export type PenjualUpdateManyMutationInput = {
     id?: IntFieldUpdateOperationsInput | number
     username?: StringFieldUpdateOperationsInput | string
-    password?: StringFieldUpdateOperationsInput | string
-    email?: StringFieldUpdateOperationsInput | string
     role?: StringFieldUpdateOperationsInput | string
   }
 
   export type PenjualUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
     username?: StringFieldUpdateOperationsInput | string
-    password?: StringFieldUpdateOperationsInput | string
-    email?: StringFieldUpdateOperationsInput | string
     role?: StringFieldUpdateOperationsInput | string
   }
 
@@ -9098,8 +8994,6 @@ export namespace Prisma {
   export type PembeliCountOrderByAggregateInput = {
     id?: SortOrder
     username?: SortOrder
-    password?: SortOrder
-    email?: SortOrder
     role?: SortOrder
   }
 
@@ -9110,16 +9004,12 @@ export namespace Prisma {
   export type PembeliMaxOrderByAggregateInput = {
     id?: SortOrder
     username?: SortOrder
-    password?: SortOrder
-    email?: SortOrder
     role?: SortOrder
   }
 
   export type PembeliMinOrderByAggregateInput = {
     id?: SortOrder
     username?: SortOrder
-    password?: SortOrder
-    email?: SortOrder
     role?: SortOrder
   }
 
@@ -9174,8 +9064,6 @@ export namespace Prisma {
   export type PenjualCountOrderByAggregateInput = {
     id?: SortOrder
     username?: SortOrder
-    password?: SortOrder
-    email?: SortOrder
     role?: SortOrder
   }
 
@@ -9186,16 +9074,12 @@ export namespace Prisma {
   export type PenjualMaxOrderByAggregateInput = {
     id?: SortOrder
     username?: SortOrder
-    password?: SortOrder
-    email?: SortOrder
     role?: SortOrder
   }
 
   export type PenjualMinOrderByAggregateInput = {
     id?: SortOrder
     username?: SortOrder
-    password?: SortOrder
-    email?: SortOrder
     role?: SortOrder
   }
 
@@ -10136,8 +10020,6 @@ export namespace Prisma {
 
   export type PembeliCreateWithoutPembayaranInput = {
     username: string
-    password: string
-    email: string
     role: string
     pesanan?: PesananCreateNestedManyWithoutPembeliInput
   }
@@ -10145,8 +10027,6 @@ export namespace Prisma {
   export type PembeliUncheckedCreateWithoutPembayaranInput = {
     id?: number
     username: string
-    password: string
-    email: string
     role: string
     pesanan?: PesananUncheckedCreateNestedManyWithoutPembeliInput
   }
@@ -10169,8 +10049,6 @@ export namespace Prisma {
 
   export type PembeliUpdateWithoutPembayaranInput = {
     username?: StringFieldUpdateOperationsInput | string
-    password?: StringFieldUpdateOperationsInput | string
-    email?: StringFieldUpdateOperationsInput | string
     role?: StringFieldUpdateOperationsInput | string
     pesanan?: PesananUpdateManyWithoutPembeliNestedInput
   }
@@ -10178,16 +10056,12 @@ export namespace Prisma {
   export type PembeliUncheckedUpdateWithoutPembayaranInput = {
     id?: IntFieldUpdateOperationsInput | number
     username?: StringFieldUpdateOperationsInput | string
-    password?: StringFieldUpdateOperationsInput | string
-    email?: StringFieldUpdateOperationsInput | string
     role?: StringFieldUpdateOperationsInput | string
     pesanan?: PesananUncheckedUpdateManyWithoutPembeliNestedInput
   }
 
   export type PembeliCreateWithoutPesananInput = {
     username: string
-    password: string
-    email: string
     role: string
     pembayaran?: PembayaranCreateNestedManyWithoutPembeliInput
   }
@@ -10195,8 +10069,6 @@ export namespace Prisma {
   export type PembeliUncheckedCreateWithoutPesananInput = {
     id?: number
     username: string
-    password: string
-    email: string
     role: string
     pembayaran?: PembayaranUncheckedCreateNestedManyWithoutPembeliInput
   }
@@ -10209,8 +10081,6 @@ export namespace Prisma {
   export type PenjualCreateWithoutPesananInput = {
     id: number
     username: string
-    password: string
-    email: string
     role: string
     produk?: ProdukCreateNestedManyWithoutPenjualInput
   }
@@ -10218,8 +10088,6 @@ export namespace Prisma {
   export type PenjualUncheckedCreateWithoutPesananInput = {
     id: number
     username: string
-    password: string
-    email: string
     role: string
     produk?: ProdukUncheckedCreateNestedManyWithoutPenjualInput
   }
@@ -10260,8 +10128,6 @@ export namespace Prisma {
 
   export type PembeliUpdateWithoutPesananInput = {
     username?: StringFieldUpdateOperationsInput | string
-    password?: StringFieldUpdateOperationsInput | string
-    email?: StringFieldUpdateOperationsInput | string
     role?: StringFieldUpdateOperationsInput | string
     pembayaran?: PembayaranUpdateManyWithoutPembeliNestedInput
   }
@@ -10269,8 +10135,6 @@ export namespace Prisma {
   export type PembeliUncheckedUpdateWithoutPesananInput = {
     id?: IntFieldUpdateOperationsInput | number
     username?: StringFieldUpdateOperationsInput | string
-    password?: StringFieldUpdateOperationsInput | string
-    email?: StringFieldUpdateOperationsInput | string
     role?: StringFieldUpdateOperationsInput | string
     pembayaran?: PembayaranUncheckedUpdateManyWithoutPembeliNestedInput
   }
@@ -10289,8 +10153,6 @@ export namespace Prisma {
   export type PenjualUpdateWithoutPesananInput = {
     id?: IntFieldUpdateOperationsInput | number
     username?: StringFieldUpdateOperationsInput | string
-    password?: StringFieldUpdateOperationsInput | string
-    email?: StringFieldUpdateOperationsInput | string
     role?: StringFieldUpdateOperationsInput | string
     produk?: ProdukUpdateManyWithoutPenjualNestedInput
   }
@@ -10298,8 +10160,6 @@ export namespace Prisma {
   export type PenjualUncheckedUpdateWithoutPesananInput = {
     id?: IntFieldUpdateOperationsInput | number
     username?: StringFieldUpdateOperationsInput | string
-    password?: StringFieldUpdateOperationsInput | string
-    email?: StringFieldUpdateOperationsInput | string
     role?: StringFieldUpdateOperationsInput | string
     produk?: ProdukUncheckedUpdateManyWithoutPenjualNestedInput
   }
@@ -10331,8 +10191,6 @@ export namespace Prisma {
   export type PenjualCreateWithoutProdukInput = {
     id: number
     username: string
-    password: string
-    email: string
     role: string
     pesanan?: PesananCreateNestedManyWithoutPenjualInput
   }
@@ -10340,8 +10198,6 @@ export namespace Prisma {
   export type PenjualUncheckedCreateWithoutProdukInput = {
     id: number
     username: string
-    password: string
-    email: string
     role: string
     pesanan?: PesananUncheckedCreateNestedManyWithoutPenjualInput
   }
@@ -10383,8 +10239,6 @@ export namespace Prisma {
   export type PenjualUpdateWithoutProdukInput = {
     id?: IntFieldUpdateOperationsInput | number
     username?: StringFieldUpdateOperationsInput | string
-    password?: StringFieldUpdateOperationsInput | string
-    email?: StringFieldUpdateOperationsInput | string
     role?: StringFieldUpdateOperationsInput | string
     pesanan?: PesananUpdateManyWithoutPenjualNestedInput
   }
@@ -10392,8 +10246,6 @@ export namespace Prisma {
   export type PenjualUncheckedUpdateWithoutProdukInput = {
     id?: IntFieldUpdateOperationsInput | number
     username?: StringFieldUpdateOperationsInput | string
-    password?: StringFieldUpdateOperationsInput | string
-    email?: StringFieldUpdateOperationsInput | string
     role?: StringFieldUpdateOperationsInput | string
     pesanan?: PesananUncheckedUpdateManyWithoutPenjualNestedInput
   }
