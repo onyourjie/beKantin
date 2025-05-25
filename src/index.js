@@ -122,12 +122,29 @@ app.delete("/products/:id", async (req, res) => {
 });
 
 //4
+app.get("/user/:id", async (req, res) => {
+    const userId = req.params.id;
+
+    try {
+        const existing = await prisma.pembeli.findUnique({
+            where: { id: parseInt(userId) },
+        });
+        if (!existing) {
+            return res.status(404).json({ message: "User not found" });
+        }
+
+        res.json(existing);
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: "Gagal simpan profil" });
+    }
+});
 app.post("/user", async (req, res) => {
     const { id, username } = req.body;
 
     try {
         const existing = await prisma.pembeli.findUnique({
-            where: { id },
+            where: { id: parseInt(id) },
         });
         if (existing) {
             return res.json({ message: "Profil sudah ada" }); // bisa di improve lagi
@@ -152,7 +169,7 @@ app.post("/admin", async (req, res) => {
 
     try {
         const existing = await prisma.penjual.findUnique({
-            where: { id },
+            where: { id: parseInt(id) },
         });
         if (existing) {
             return res.json({ message: "Profil sudah ada" }); // bisa di improve lagi
