@@ -63,48 +63,6 @@ app.get("/products/:id", async (req, res) => {
 });
 
 //2
-app.post("/products", async (req, res) => {
-    const { nama, harga, jenis, stock } = req.body;
-
-    try {
-        const products = await prisma.produk.create({
-            data: {
-                nama,
-                harga,
-                jenis,
-                stock,
-                penjualId: 1,
-            },
-        });
-
-        res.json({ message: "Berhasil tambah produk", products });
-    } catch (error) {
-        res.status(500).json({ error: error.message });
-    }
-});
-
-//3
-app.put("/products/:id", async (req, res) => {
-    const productId = req.params.id;
-    const { nama, harga, jenis, stock } = req.body;
-
-    try {
-        const product = await prisma.produk.update({
-            where: { id: parseInt(productId) },
-            data: {
-                nama,
-                harga,
-                jenis,
-                stock,
-                penjualId: 1,
-            },
-        });
-
-        res.json({ message: "Berhasil update produk", product });
-    } catch (error) {
-        res.status(400).json({ error: error.message });
-    }
-});
 app.delete("/products/:id", async (req, res) => {
     const productId = req.params.id;
 
@@ -121,7 +79,51 @@ app.delete("/products/:id", async (req, res) => {
     }
 });
 
+//3
+app.put("/products/:id", async (req, res) => {
+    const productId = req.params.id;
+    const { nama, harga, jenis, stock } = req.body;
+
+    try {
+        const product = await prisma.produk.update({
+            where: { id: parseInt(productId) },
+            data: {
+                nama,
+                harga,
+                jenis,
+                stock,
+                penjualId: "aa",
+            },
+        });
+
+        res.json({ message: "Berhasil update produk", product });
+    } catch (error) {
+        res.status(400).json({ error: error.message });
+    }
+});
+
 //4
+app.post("/products", async (req, res) => {
+    const { nama, harga, jenis, stock } = req.body;
+
+    try {
+        const products = await prisma.produk.create({
+            data: {
+                nama,
+                harga,
+                jenis,
+                stock,
+                penjualId: "aa",
+            },
+        });
+
+        res.json({ message: "Berhasil tambah produk", products });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
+//5
 app.post("/user", async (req, res) => {
     const { id, username } = req.body;
 
@@ -183,7 +185,7 @@ app.post("/order", async (req, res) => {
                 jumlahProduk,
                 status,
                 pembeliId,
-                penjualId: 1,
+                penjualId: "aa",
                 pesananProduk: {
                     create: pesananProduk.map((p) => ({
                         produk: { connect: { id: p.produkId } },
