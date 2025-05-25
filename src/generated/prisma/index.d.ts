@@ -1471,28 +1471,18 @@ export namespace Prisma {
 
   export type AggregatePembeli = {
     _count: PembeliCountAggregateOutputType | null
-    _avg: PembeliAvgAggregateOutputType | null
-    _sum: PembeliSumAggregateOutputType | null
     _min: PembeliMinAggregateOutputType | null
     _max: PembeliMaxAggregateOutputType | null
   }
 
-  export type PembeliAvgAggregateOutputType = {
-    id: number | null
-  }
-
-  export type PembeliSumAggregateOutputType = {
-    id: number | null
-  }
-
   export type PembeliMinAggregateOutputType = {
-    id: number | null
+    id: string | null
     username: string | null
     role: string | null
   }
 
   export type PembeliMaxAggregateOutputType = {
-    id: number | null
+    id: string | null
     username: string | null
     role: string | null
   }
@@ -1504,14 +1494,6 @@ export namespace Prisma {
     _all: number
   }
 
-
-  export type PembeliAvgAggregateInputType = {
-    id?: true
-  }
-
-  export type PembeliSumAggregateInputType = {
-    id?: true
-  }
 
   export type PembeliMinAggregateInputType = {
     id?: true
@@ -1570,18 +1552,6 @@ export namespace Prisma {
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Select which fields to average
-    **/
-    _avg?: PembeliAvgAggregateInputType
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
-     * 
-     * Select which fields to sum
-    **/
-    _sum?: PembeliSumAggregateInputType
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
-     * 
      * Select which fields to find the minimum value
     **/
     _min?: PembeliMinAggregateInputType
@@ -1612,19 +1582,15 @@ export namespace Prisma {
     take?: number
     skip?: number
     _count?: PembeliCountAggregateInputType | true
-    _avg?: PembeliAvgAggregateInputType
-    _sum?: PembeliSumAggregateInputType
     _min?: PembeliMinAggregateInputType
     _max?: PembeliMaxAggregateInputType
   }
 
   export type PembeliGroupByOutputType = {
-    id: number
+    id: string
     username: string
     role: string
     _count: PembeliCountAggregateOutputType | null
-    _avg: PembeliAvgAggregateOutputType | null
-    _sum: PembeliSumAggregateOutputType | null
     _min: PembeliMinAggregateOutputType | null
     _max: PembeliMaxAggregateOutputType | null
   }
@@ -1686,7 +1652,7 @@ export namespace Prisma {
       pesanan: Prisma.$PesananPayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
-      id: number
+      id: string
       username: string
       role: string
     }, ExtArgs["result"]["pembeli"]>
@@ -2114,7 +2080,7 @@ export namespace Prisma {
    * Fields of the Pembeli model
    */
   interface PembeliFieldRefs {
-    readonly id: FieldRef<"Pembeli", 'Int'>
+    readonly id: FieldRef<"Pembeli", 'String'>
     readonly username: FieldRef<"Pembeli", 'String'>
     readonly role: FieldRef<"Pembeli", 'String'>
   }
@@ -2577,28 +2543,18 @@ export namespace Prisma {
 
   export type AggregatePenjual = {
     _count: PenjualCountAggregateOutputType | null
-    _avg: PenjualAvgAggregateOutputType | null
-    _sum: PenjualSumAggregateOutputType | null
     _min: PenjualMinAggregateOutputType | null
     _max: PenjualMaxAggregateOutputType | null
   }
 
-  export type PenjualAvgAggregateOutputType = {
-    id: number | null
-  }
-
-  export type PenjualSumAggregateOutputType = {
-    id: number | null
-  }
-
   export type PenjualMinAggregateOutputType = {
-    id: number | null
+    id: string | null
     username: string | null
     role: string | null
   }
 
   export type PenjualMaxAggregateOutputType = {
-    id: number | null
+    id: string | null
     username: string | null
     role: string | null
   }
@@ -2610,14 +2566,6 @@ export namespace Prisma {
     _all: number
   }
 
-
-  export type PenjualAvgAggregateInputType = {
-    id?: true
-  }
-
-  export type PenjualSumAggregateInputType = {
-    id?: true
-  }
 
   export type PenjualMinAggregateInputType = {
     id?: true
@@ -2676,18 +2624,6 @@ export namespace Prisma {
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Select which fields to average
-    **/
-    _avg?: PenjualAvgAggregateInputType
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
-     * 
-     * Select which fields to sum
-    **/
-    _sum?: PenjualSumAggregateInputType
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
-     * 
      * Select which fields to find the minimum value
     **/
     _min?: PenjualMinAggregateInputType
@@ -2718,19 +2654,15 @@ export namespace Prisma {
     take?: number
     skip?: number
     _count?: PenjualCountAggregateInputType | true
-    _avg?: PenjualAvgAggregateInputType
-    _sum?: PenjualSumAggregateInputType
     _min?: PenjualMinAggregateInputType
     _max?: PenjualMaxAggregateInputType
   }
 
   export type PenjualGroupByOutputType = {
-    id: number
+    id: string
     username: string
     role: string
     _count: PenjualCountAggregateOutputType | null
-    _avg: PenjualAvgAggregateOutputType | null
-    _sum: PenjualSumAggregateOutputType | null
     _min: PenjualMinAggregateOutputType | null
     _max: PenjualMaxAggregateOutputType | null
   }
@@ -2792,7 +2724,7 @@ export namespace Prisma {
       produk: Prisma.$ProdukPayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
-      id: number
+      id: string
       username: string
       role: string
     }, ExtArgs["result"]["penjual"]>
@@ -3220,7 +3152,7 @@ export namespace Prisma {
    * Fields of the Penjual model
    */
   interface PenjualFieldRefs {
-    readonly id: FieldRef<"Penjual", 'Int'>
+    readonly id: FieldRef<"Penjual", 'String'>
     readonly username: FieldRef<"Penjual", 'String'>
     readonly role: FieldRef<"Penjual", 'String'>
   }
@@ -3692,25 +3624,23 @@ export namespace Prisma {
   export type PembayaranAvgAggregateOutputType = {
     id: number | null
     jumlah: number | null
-    pembeliId: number | null
   }
 
   export type PembayaranSumAggregateOutputType = {
     id: number | null
     jumlah: number | null
-    pembeliId: number | null
   }
 
   export type PembayaranMinAggregateOutputType = {
     id: number | null
     jumlah: number | null
-    pembeliId: number | null
+    pembeliId: string | null
   }
 
   export type PembayaranMaxAggregateOutputType = {
     id: number | null
     jumlah: number | null
-    pembeliId: number | null
+    pembeliId: string | null
   }
 
   export type PembayaranCountAggregateOutputType = {
@@ -3724,13 +3654,11 @@ export namespace Prisma {
   export type PembayaranAvgAggregateInputType = {
     id?: true
     jumlah?: true
-    pembeliId?: true
   }
 
   export type PembayaranSumAggregateInputType = {
     id?: true
     jumlah?: true
-    pembeliId?: true
   }
 
   export type PembayaranMinAggregateInputType = {
@@ -3841,7 +3769,7 @@ export namespace Prisma {
   export type PembayaranGroupByOutputType = {
     id: number
     jumlah: number
-    pembeliId: number
+    pembeliId: string
     _count: PembayaranCountAggregateOutputType | null
     _avg: PembayaranAvgAggregateOutputType | null
     _sum: PembayaranSumAggregateOutputType | null
@@ -3909,7 +3837,7 @@ export namespace Prisma {
     scalars: $Extensions.GetPayloadResult<{
       id: number
       jumlah: number
-      pembeliId: number
+      pembeliId: string
     }, ExtArgs["result"]["pembayaran"]>
     composites: {}
   }
@@ -4336,7 +4264,7 @@ export namespace Prisma {
   interface PembayaranFieldRefs {
     readonly id: FieldRef<"Pembayaran", 'Int'>
     readonly jumlah: FieldRef<"Pembayaran", 'Float'>
-    readonly pembeliId: FieldRef<"Pembayaran", 'Int'>
+    readonly pembeliId: FieldRef<"Pembayaran", 'String'>
   }
     
 
@@ -4765,14 +4693,10 @@ export namespace Prisma {
 
   export type PesananAvgAggregateOutputType = {
     jumlahProduk: number | null
-    pembeliId: number | null
-    penjualId: number | null
   }
 
   export type PesananSumAggregateOutputType = {
     jumlahProduk: number | null
-    pembeliId: number | null
-    penjualId: number | null
   }
 
   export type PesananMinAggregateOutputType = {
@@ -4780,8 +4704,8 @@ export namespace Prisma {
     jumlahProduk: number | null
     tanggal: Date | null
     status: boolean | null
-    pembeliId: number | null
-    penjualId: number | null
+    pembeliId: string | null
+    penjualId: string | null
   }
 
   export type PesananMaxAggregateOutputType = {
@@ -4789,8 +4713,8 @@ export namespace Prisma {
     jumlahProduk: number | null
     tanggal: Date | null
     status: boolean | null
-    pembeliId: number | null
-    penjualId: number | null
+    pembeliId: string | null
+    penjualId: string | null
   }
 
   export type PesananCountAggregateOutputType = {
@@ -4806,14 +4730,10 @@ export namespace Prisma {
 
   export type PesananAvgAggregateInputType = {
     jumlahProduk?: true
-    pembeliId?: true
-    penjualId?: true
   }
 
   export type PesananSumAggregateInputType = {
     jumlahProduk?: true
-    pembeliId?: true
-    penjualId?: true
   }
 
   export type PesananMinAggregateInputType = {
@@ -4935,8 +4855,8 @@ export namespace Prisma {
     jumlahProduk: number
     tanggal: Date
     status: boolean
-    pembeliId: number
-    penjualId: number
+    pembeliId: string
+    penjualId: string
     _count: PesananCountAggregateOutputType | null
     _avg: PesananAvgAggregateOutputType | null
     _sum: PesananSumAggregateOutputType | null
@@ -5030,8 +4950,8 @@ export namespace Prisma {
       jumlahProduk: number
       tanggal: Date
       status: boolean
-      pembeliId: number
-      penjualId: number
+      pembeliId: string
+      penjualId: string
     }, ExtArgs["result"]["pesanan"]>
     composites: {}
   }
@@ -5462,8 +5382,8 @@ export namespace Prisma {
     readonly jumlahProduk: FieldRef<"Pesanan", 'Int'>
     readonly tanggal: FieldRef<"Pesanan", 'DateTime'>
     readonly status: FieldRef<"Pesanan", 'Boolean'>
-    readonly pembeliId: FieldRef<"Pesanan", 'Int'>
-    readonly penjualId: FieldRef<"Pesanan", 'Int'>
+    readonly pembeliId: FieldRef<"Pesanan", 'String'>
+    readonly penjualId: FieldRef<"Pesanan", 'String'>
   }
     
 
@@ -5918,14 +5838,12 @@ export namespace Prisma {
     id: number | null
     harga: number | null
     stock: number | null
-    penjualId: number | null
   }
 
   export type ProdukSumAggregateOutputType = {
     id: number | null
     harga: number | null
     stock: number | null
-    penjualId: number | null
   }
 
   export type ProdukMinAggregateOutputType = {
@@ -5934,7 +5852,7 @@ export namespace Prisma {
     harga: number | null
     jenis: string | null
     stock: number | null
-    penjualId: number | null
+    penjualId: string | null
     tanggalDibuat: Date | null
     diperbarui: Date | null
   }
@@ -5945,7 +5863,7 @@ export namespace Prisma {
     harga: number | null
     jenis: string | null
     stock: number | null
-    penjualId: number | null
+    penjualId: string | null
     tanggalDibuat: Date | null
     diperbarui: Date | null
   }
@@ -5967,14 +5885,12 @@ export namespace Prisma {
     id?: true
     harga?: true
     stock?: true
-    penjualId?: true
   }
 
   export type ProdukSumAggregateInputType = {
     id?: true
     harga?: true
     stock?: true
-    penjualId?: true
   }
 
   export type ProdukMinAggregateInputType = {
@@ -6103,7 +6019,7 @@ export namespace Prisma {
     harga: number
     jenis: string
     stock: number
-    penjualId: number
+    penjualId: string
     tanggalDibuat: Date
     diperbarui: Date
     _count: ProdukCountAggregateOutputType | null
@@ -6201,7 +6117,7 @@ export namespace Prisma {
       harga: number
       jenis: string
       stock: number
-      penjualId: number
+      penjualId: string
       tanggalDibuat: Date
       diperbarui: Date
     }, ExtArgs["result"]["produk"]>
@@ -6634,7 +6550,7 @@ export namespace Prisma {
     readonly harga: FieldRef<"Produk", 'Int'>
     readonly jenis: FieldRef<"Produk", 'String'>
     readonly stock: FieldRef<"Produk", 'Int'>
-    readonly penjualId: FieldRef<"Produk", 'Int'>
+    readonly penjualId: FieldRef<"Produk", 'String'>
     readonly tanggalDibuat: FieldRef<"Produk", 'DateTime'>
     readonly diperbarui: FieldRef<"Produk", 'DateTime'>
   }
@@ -8233,20 +8149,6 @@ export namespace Prisma {
 
 
   /**
-   * Reference to a field of type 'Int'
-   */
-  export type IntFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Int'>
-    
-
-
-  /**
-   * Reference to a field of type 'Int[]'
-   */
-  export type ListIntFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Int[]'>
-    
-
-
-  /**
    * Reference to a field of type 'String'
    */
   export type StringFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'String'>
@@ -8257,6 +8159,20 @@ export namespace Prisma {
    * Reference to a field of type 'String[]'
    */
   export type ListStringFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'String[]'>
+    
+
+
+  /**
+   * Reference to a field of type 'Int'
+   */
+  export type IntFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Int'>
+    
+
+
+  /**
+   * Reference to a field of type 'Int[]'
+   */
+  export type ListIntFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Int[]'>
     
 
 
@@ -8302,7 +8218,7 @@ export namespace Prisma {
     AND?: PembeliWhereInput | PembeliWhereInput[]
     OR?: PembeliWhereInput[]
     NOT?: PembeliWhereInput | PembeliWhereInput[]
-    id?: IntFilter<"Pembeli"> | number
+    id?: StringFilter<"Pembeli"> | string
     username?: StringFilter<"Pembeli"> | string
     role?: StringFilter<"Pembeli"> | string
     pembayaran?: PembayaranListRelationFilter
@@ -8318,7 +8234,7 @@ export namespace Prisma {
   }
 
   export type PembeliWhereUniqueInput = Prisma.AtLeast<{
-    id?: number
+    id?: string
     AND?: PembeliWhereInput | PembeliWhereInput[]
     OR?: PembeliWhereInput[]
     NOT?: PembeliWhereInput | PembeliWhereInput[]
@@ -8333,17 +8249,15 @@ export namespace Prisma {
     username?: SortOrder
     role?: SortOrder
     _count?: PembeliCountOrderByAggregateInput
-    _avg?: PembeliAvgOrderByAggregateInput
     _max?: PembeliMaxOrderByAggregateInput
     _min?: PembeliMinOrderByAggregateInput
-    _sum?: PembeliSumOrderByAggregateInput
   }
 
   export type PembeliScalarWhereWithAggregatesInput = {
     AND?: PembeliScalarWhereWithAggregatesInput | PembeliScalarWhereWithAggregatesInput[]
     OR?: PembeliScalarWhereWithAggregatesInput[]
     NOT?: PembeliScalarWhereWithAggregatesInput | PembeliScalarWhereWithAggregatesInput[]
-    id?: IntWithAggregatesFilter<"Pembeli"> | number
+    id?: StringWithAggregatesFilter<"Pembeli"> | string
     username?: StringWithAggregatesFilter<"Pembeli"> | string
     role?: StringWithAggregatesFilter<"Pembeli"> | string
   }
@@ -8352,7 +8266,7 @@ export namespace Prisma {
     AND?: PenjualWhereInput | PenjualWhereInput[]
     OR?: PenjualWhereInput[]
     NOT?: PenjualWhereInput | PenjualWhereInput[]
-    id?: IntFilter<"Penjual"> | number
+    id?: StringFilter<"Penjual"> | string
     username?: StringFilter<"Penjual"> | string
     role?: StringFilter<"Penjual"> | string
     pesanan?: PesananListRelationFilter
@@ -8368,7 +8282,7 @@ export namespace Prisma {
   }
 
   export type PenjualWhereUniqueInput = Prisma.AtLeast<{
-    id?: number
+    id?: string
     AND?: PenjualWhereInput | PenjualWhereInput[]
     OR?: PenjualWhereInput[]
     NOT?: PenjualWhereInput | PenjualWhereInput[]
@@ -8383,17 +8297,15 @@ export namespace Prisma {
     username?: SortOrder
     role?: SortOrder
     _count?: PenjualCountOrderByAggregateInput
-    _avg?: PenjualAvgOrderByAggregateInput
     _max?: PenjualMaxOrderByAggregateInput
     _min?: PenjualMinOrderByAggregateInput
-    _sum?: PenjualSumOrderByAggregateInput
   }
 
   export type PenjualScalarWhereWithAggregatesInput = {
     AND?: PenjualScalarWhereWithAggregatesInput | PenjualScalarWhereWithAggregatesInput[]
     OR?: PenjualScalarWhereWithAggregatesInput[]
     NOT?: PenjualScalarWhereWithAggregatesInput | PenjualScalarWhereWithAggregatesInput[]
-    id?: IntWithAggregatesFilter<"Penjual"> | number
+    id?: StringWithAggregatesFilter<"Penjual"> | string
     username?: StringWithAggregatesFilter<"Penjual"> | string
     role?: StringWithAggregatesFilter<"Penjual"> | string
   }
@@ -8404,7 +8316,7 @@ export namespace Prisma {
     NOT?: PembayaranWhereInput | PembayaranWhereInput[]
     id?: IntFilter<"Pembayaran"> | number
     jumlah?: FloatFilter<"Pembayaran"> | number
-    pembeliId?: IntFilter<"Pembayaran"> | number
+    pembeliId?: StringFilter<"Pembayaran"> | string
     pembeli?: XOR<PembeliScalarRelationFilter, PembeliWhereInput>
   }
 
@@ -8421,7 +8333,7 @@ export namespace Prisma {
     OR?: PembayaranWhereInput[]
     NOT?: PembayaranWhereInput | PembayaranWhereInput[]
     jumlah?: FloatFilter<"Pembayaran"> | number
-    pembeliId?: IntFilter<"Pembayaran"> | number
+    pembeliId?: StringFilter<"Pembayaran"> | string
     pembeli?: XOR<PembeliScalarRelationFilter, PembeliWhereInput>
   }, "id">
 
@@ -8442,7 +8354,7 @@ export namespace Prisma {
     NOT?: PembayaranScalarWhereWithAggregatesInput | PembayaranScalarWhereWithAggregatesInput[]
     id?: IntWithAggregatesFilter<"Pembayaran"> | number
     jumlah?: FloatWithAggregatesFilter<"Pembayaran"> | number
-    pembeliId?: IntWithAggregatesFilter<"Pembayaran"> | number
+    pembeliId?: StringWithAggregatesFilter<"Pembayaran"> | string
   }
 
   export type PesananWhereInput = {
@@ -8453,8 +8365,8 @@ export namespace Prisma {
     jumlahProduk?: IntFilter<"Pesanan"> | number
     tanggal?: DateTimeFilter<"Pesanan"> | Date | string
     status?: BoolFilter<"Pesanan"> | boolean
-    pembeliId?: IntFilter<"Pesanan"> | number
-    penjualId?: IntFilter<"Pesanan"> | number
+    pembeliId?: StringFilter<"Pesanan"> | string
+    penjualId?: StringFilter<"Pesanan"> | string
     pembeli?: XOR<PembeliScalarRelationFilter, PembeliWhereInput>
     penjual?: XOR<PenjualScalarRelationFilter, PenjualWhereInput>
     pesananProduk?: PesananProdukListRelationFilter
@@ -8480,8 +8392,8 @@ export namespace Prisma {
     jumlahProduk?: IntFilter<"Pesanan"> | number
     tanggal?: DateTimeFilter<"Pesanan"> | Date | string
     status?: BoolFilter<"Pesanan"> | boolean
-    pembeliId?: IntFilter<"Pesanan"> | number
-    penjualId?: IntFilter<"Pesanan"> | number
+    pembeliId?: StringFilter<"Pesanan"> | string
+    penjualId?: StringFilter<"Pesanan"> | string
     pembeli?: XOR<PembeliScalarRelationFilter, PembeliWhereInput>
     penjual?: XOR<PenjualScalarRelationFilter, PenjualWhereInput>
     pesananProduk?: PesananProdukListRelationFilter
@@ -8509,8 +8421,8 @@ export namespace Prisma {
     jumlahProduk?: IntWithAggregatesFilter<"Pesanan"> | number
     tanggal?: DateTimeWithAggregatesFilter<"Pesanan"> | Date | string
     status?: BoolWithAggregatesFilter<"Pesanan"> | boolean
-    pembeliId?: IntWithAggregatesFilter<"Pesanan"> | number
-    penjualId?: IntWithAggregatesFilter<"Pesanan"> | number
+    pembeliId?: StringWithAggregatesFilter<"Pesanan"> | string
+    penjualId?: StringWithAggregatesFilter<"Pesanan"> | string
   }
 
   export type ProdukWhereInput = {
@@ -8522,7 +8434,7 @@ export namespace Prisma {
     harga?: IntFilter<"Produk"> | number
     jenis?: StringFilter<"Produk"> | string
     stock?: IntFilter<"Produk"> | number
-    penjualId?: IntFilter<"Produk"> | number
+    penjualId?: StringFilter<"Produk"> | string
     tanggalDibuat?: DateTimeFilter<"Produk"> | Date | string
     diperbarui?: DateTimeFilter<"Produk"> | Date | string
     penjual?: XOR<PenjualScalarRelationFilter, PenjualWhereInput>
@@ -8551,7 +8463,7 @@ export namespace Prisma {
     harga?: IntFilter<"Produk"> | number
     jenis?: StringFilter<"Produk"> | string
     stock?: IntFilter<"Produk"> | number
-    penjualId?: IntFilter<"Produk"> | number
+    penjualId?: StringFilter<"Produk"> | string
     tanggalDibuat?: DateTimeFilter<"Produk"> | Date | string
     diperbarui?: DateTimeFilter<"Produk"> | Date | string
     penjual?: XOR<PenjualScalarRelationFilter, PenjualWhereInput>
@@ -8583,7 +8495,7 @@ export namespace Prisma {
     harga?: IntWithAggregatesFilter<"Produk"> | number
     jenis?: StringWithAggregatesFilter<"Produk"> | string
     stock?: IntWithAggregatesFilter<"Produk"> | number
-    penjualId?: IntWithAggregatesFilter<"Produk"> | number
+    penjualId?: StringWithAggregatesFilter<"Produk"> | string
     tanggalDibuat?: DateTimeWithAggregatesFilter<"Produk"> | Date | string
     diperbarui?: DateTimeWithAggregatesFilter<"Produk"> | Date | string
   }
@@ -8635,6 +8547,7 @@ export namespace Prisma {
   }
 
   export type PembeliCreateInput = {
+    id: string
     username: string
     role: string
     pembayaran?: PembayaranCreateNestedManyWithoutPembeliInput
@@ -8642,7 +8555,7 @@ export namespace Prisma {
   }
 
   export type PembeliUncheckedCreateInput = {
-    id?: number
+    id: string
     username: string
     role: string
     pembayaran?: PembayaranUncheckedCreateNestedManyWithoutPembeliInput
@@ -8650,6 +8563,7 @@ export namespace Prisma {
   }
 
   export type PembeliUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
     username?: StringFieldUpdateOperationsInput | string
     role?: StringFieldUpdateOperationsInput | string
     pembayaran?: PembayaranUpdateManyWithoutPembeliNestedInput
@@ -8657,7 +8571,7 @@ export namespace Prisma {
   }
 
   export type PembeliUncheckedUpdateInput = {
-    id?: IntFieldUpdateOperationsInput | number
+    id?: StringFieldUpdateOperationsInput | string
     username?: StringFieldUpdateOperationsInput | string
     role?: StringFieldUpdateOperationsInput | string
     pembayaran?: PembayaranUncheckedUpdateManyWithoutPembeliNestedInput
@@ -8665,24 +8579,25 @@ export namespace Prisma {
   }
 
   export type PembeliCreateManyInput = {
-    id?: number
+    id: string
     username: string
     role: string
   }
 
   export type PembeliUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
     username?: StringFieldUpdateOperationsInput | string
     role?: StringFieldUpdateOperationsInput | string
   }
 
   export type PembeliUncheckedUpdateManyInput = {
-    id?: IntFieldUpdateOperationsInput | number
+    id?: StringFieldUpdateOperationsInput | string
     username?: StringFieldUpdateOperationsInput | string
     role?: StringFieldUpdateOperationsInput | string
   }
 
   export type PenjualCreateInput = {
-    id: number
+    id: string
     username: string
     role: string
     pesanan?: PesananCreateNestedManyWithoutPenjualInput
@@ -8690,7 +8605,7 @@ export namespace Prisma {
   }
 
   export type PenjualUncheckedCreateInput = {
-    id: number
+    id: string
     username: string
     role: string
     pesanan?: PesananUncheckedCreateNestedManyWithoutPenjualInput
@@ -8698,7 +8613,7 @@ export namespace Prisma {
   }
 
   export type PenjualUpdateInput = {
-    id?: IntFieldUpdateOperationsInput | number
+    id?: StringFieldUpdateOperationsInput | string
     username?: StringFieldUpdateOperationsInput | string
     role?: StringFieldUpdateOperationsInput | string
     pesanan?: PesananUpdateManyWithoutPenjualNestedInput
@@ -8706,7 +8621,7 @@ export namespace Prisma {
   }
 
   export type PenjualUncheckedUpdateInput = {
-    id?: IntFieldUpdateOperationsInput | number
+    id?: StringFieldUpdateOperationsInput | string
     username?: StringFieldUpdateOperationsInput | string
     role?: StringFieldUpdateOperationsInput | string
     pesanan?: PesananUncheckedUpdateManyWithoutPenjualNestedInput
@@ -8714,19 +8629,19 @@ export namespace Prisma {
   }
 
   export type PenjualCreateManyInput = {
-    id: number
+    id: string
     username: string
     role: string
   }
 
   export type PenjualUpdateManyMutationInput = {
-    id?: IntFieldUpdateOperationsInput | number
+    id?: StringFieldUpdateOperationsInput | string
     username?: StringFieldUpdateOperationsInput | string
     role?: StringFieldUpdateOperationsInput | string
   }
 
   export type PenjualUncheckedUpdateManyInput = {
-    id?: IntFieldUpdateOperationsInput | number
+    id?: StringFieldUpdateOperationsInput | string
     username?: StringFieldUpdateOperationsInput | string
     role?: StringFieldUpdateOperationsInput | string
   }
@@ -8739,7 +8654,7 @@ export namespace Prisma {
   export type PembayaranUncheckedCreateInput = {
     id?: number
     jumlah: number
-    pembeliId: number
+    pembeliId: string
   }
 
   export type PembayaranUpdateInput = {
@@ -8750,13 +8665,13 @@ export namespace Prisma {
   export type PembayaranUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
     jumlah?: FloatFieldUpdateOperationsInput | number
-    pembeliId?: IntFieldUpdateOperationsInput | number
+    pembeliId?: StringFieldUpdateOperationsInput | string
   }
 
   export type PembayaranCreateManyInput = {
     id?: number
     jumlah: number
-    pembeliId: number
+    pembeliId: string
   }
 
   export type PembayaranUpdateManyMutationInput = {
@@ -8766,7 +8681,7 @@ export namespace Prisma {
   export type PembayaranUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
     jumlah?: FloatFieldUpdateOperationsInput | number
-    pembeliId?: IntFieldUpdateOperationsInput | number
+    pembeliId?: StringFieldUpdateOperationsInput | string
   }
 
   export type PesananCreateInput = {
@@ -8784,8 +8699,8 @@ export namespace Prisma {
     jumlahProduk: number
     tanggal?: Date | string
     status: boolean
-    pembeliId: number
-    penjualId: number
+    pembeliId: string
+    penjualId: string
     pesananProduk?: PesananProdukUncheckedCreateNestedManyWithoutPesananInput
   }
 
@@ -8804,8 +8719,8 @@ export namespace Prisma {
     jumlahProduk?: IntFieldUpdateOperationsInput | number
     tanggal?: DateTimeFieldUpdateOperationsInput | Date | string
     status?: BoolFieldUpdateOperationsInput | boolean
-    pembeliId?: IntFieldUpdateOperationsInput | number
-    penjualId?: IntFieldUpdateOperationsInput | number
+    pembeliId?: StringFieldUpdateOperationsInput | string
+    penjualId?: StringFieldUpdateOperationsInput | string
     pesananProduk?: PesananProdukUncheckedUpdateManyWithoutPesananNestedInput
   }
 
@@ -8814,8 +8729,8 @@ export namespace Prisma {
     jumlahProduk: number
     tanggal?: Date | string
     status: boolean
-    pembeliId: number
-    penjualId: number
+    pembeliId: string
+    penjualId: string
   }
 
   export type PesananUpdateManyMutationInput = {
@@ -8830,8 +8745,8 @@ export namespace Prisma {
     jumlahProduk?: IntFieldUpdateOperationsInput | number
     tanggal?: DateTimeFieldUpdateOperationsInput | Date | string
     status?: BoolFieldUpdateOperationsInput | boolean
-    pembeliId?: IntFieldUpdateOperationsInput | number
-    penjualId?: IntFieldUpdateOperationsInput | number
+    pembeliId?: StringFieldUpdateOperationsInput | string
+    penjualId?: StringFieldUpdateOperationsInput | string
   }
 
   export type ProdukCreateInput = {
@@ -8851,7 +8766,7 @@ export namespace Prisma {
     harga: number
     jenis: string
     stock: number
-    penjualId: number
+    penjualId: string
     tanggalDibuat?: Date | string
     diperbarui?: Date | string
     pesananProduk?: PesananProdukUncheckedCreateNestedManyWithoutProdukInput
@@ -8874,7 +8789,7 @@ export namespace Prisma {
     harga?: IntFieldUpdateOperationsInput | number
     jenis?: StringFieldUpdateOperationsInput | string
     stock?: IntFieldUpdateOperationsInput | number
-    penjualId?: IntFieldUpdateOperationsInput | number
+    penjualId?: StringFieldUpdateOperationsInput | string
     tanggalDibuat?: DateTimeFieldUpdateOperationsInput | Date | string
     diperbarui?: DateTimeFieldUpdateOperationsInput | Date | string
     pesananProduk?: PesananProdukUncheckedUpdateManyWithoutProdukNestedInput
@@ -8886,7 +8801,7 @@ export namespace Prisma {
     harga: number
     jenis: string
     stock: number
-    penjualId: number
+    penjualId: string
     tanggalDibuat?: Date | string
     diperbarui?: Date | string
   }
@@ -8906,7 +8821,7 @@ export namespace Prisma {
     harga?: IntFieldUpdateOperationsInput | number
     jenis?: StringFieldUpdateOperationsInput | string
     stock?: IntFieldUpdateOperationsInput | number
-    penjualId?: IntFieldUpdateOperationsInput | number
+    penjualId?: StringFieldUpdateOperationsInput | string
     tanggalDibuat?: DateTimeFieldUpdateOperationsInput | Date | string
     diperbarui?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -8943,17 +8858,6 @@ export namespace Prisma {
   export type PesananProdukUncheckedUpdateManyInput = {
     pesananId?: StringFieldUpdateOperationsInput | string
     produkId?: IntFieldUpdateOperationsInput | number
-  }
-
-  export type IntFilter<$PrismaModel = never> = {
-    equals?: number | IntFieldRefInput<$PrismaModel>
-    in?: number[] | ListIntFieldRefInput<$PrismaModel>
-    notIn?: number[] | ListIntFieldRefInput<$PrismaModel>
-    lt?: number | IntFieldRefInput<$PrismaModel>
-    lte?: number | IntFieldRefInput<$PrismaModel>
-    gt?: number | IntFieldRefInput<$PrismaModel>
-    gte?: number | IntFieldRefInput<$PrismaModel>
-    not?: NestedIntFilter<$PrismaModel> | number
   }
 
   export type StringFilter<$PrismaModel = never> = {
@@ -8997,10 +8901,6 @@ export namespace Prisma {
     role?: SortOrder
   }
 
-  export type PembeliAvgOrderByAggregateInput = {
-    id?: SortOrder
-  }
-
   export type PembeliMaxOrderByAggregateInput = {
     id?: SortOrder
     username?: SortOrder
@@ -9011,26 +8911,6 @@ export namespace Prisma {
     id?: SortOrder
     username?: SortOrder
     role?: SortOrder
-  }
-
-  export type PembeliSumOrderByAggregateInput = {
-    id?: SortOrder
-  }
-
-  export type IntWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: number | IntFieldRefInput<$PrismaModel>
-    in?: number[] | ListIntFieldRefInput<$PrismaModel>
-    notIn?: number[] | ListIntFieldRefInput<$PrismaModel>
-    lt?: number | IntFieldRefInput<$PrismaModel>
-    lte?: number | IntFieldRefInput<$PrismaModel>
-    gt?: number | IntFieldRefInput<$PrismaModel>
-    gte?: number | IntFieldRefInput<$PrismaModel>
-    not?: NestedIntWithAggregatesFilter<$PrismaModel> | number
-    _count?: NestedIntFilter<$PrismaModel>
-    _avg?: NestedFloatFilter<$PrismaModel>
-    _sum?: NestedIntFilter<$PrismaModel>
-    _min?: NestedIntFilter<$PrismaModel>
-    _max?: NestedIntFilter<$PrismaModel>
   }
 
   export type StringWithAggregatesFilter<$PrismaModel = never> = {
@@ -9067,10 +8947,6 @@ export namespace Prisma {
     role?: SortOrder
   }
 
-  export type PenjualAvgOrderByAggregateInput = {
-    id?: SortOrder
-  }
-
   export type PenjualMaxOrderByAggregateInput = {
     id?: SortOrder
     username?: SortOrder
@@ -9083,8 +8959,15 @@ export namespace Prisma {
     role?: SortOrder
   }
 
-  export type PenjualSumOrderByAggregateInput = {
-    id?: SortOrder
+  export type IntFilter<$PrismaModel = never> = {
+    equals?: number | IntFieldRefInput<$PrismaModel>
+    in?: number[] | ListIntFieldRefInput<$PrismaModel>
+    notIn?: number[] | ListIntFieldRefInput<$PrismaModel>
+    lt?: number | IntFieldRefInput<$PrismaModel>
+    lte?: number | IntFieldRefInput<$PrismaModel>
+    gt?: number | IntFieldRefInput<$PrismaModel>
+    gte?: number | IntFieldRefInput<$PrismaModel>
+    not?: NestedIntFilter<$PrismaModel> | number
   }
 
   export type FloatFilter<$PrismaModel = never> = {
@@ -9112,7 +8995,6 @@ export namespace Prisma {
   export type PembayaranAvgOrderByAggregateInput = {
     id?: SortOrder
     jumlah?: SortOrder
-    pembeliId?: SortOrder
   }
 
   export type PembayaranMaxOrderByAggregateInput = {
@@ -9130,7 +9012,22 @@ export namespace Prisma {
   export type PembayaranSumOrderByAggregateInput = {
     id?: SortOrder
     jumlah?: SortOrder
-    pembeliId?: SortOrder
+  }
+
+  export type IntWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: number | IntFieldRefInput<$PrismaModel>
+    in?: number[] | ListIntFieldRefInput<$PrismaModel>
+    notIn?: number[] | ListIntFieldRefInput<$PrismaModel>
+    lt?: number | IntFieldRefInput<$PrismaModel>
+    lte?: number | IntFieldRefInput<$PrismaModel>
+    gt?: number | IntFieldRefInput<$PrismaModel>
+    gte?: number | IntFieldRefInput<$PrismaModel>
+    not?: NestedIntWithAggregatesFilter<$PrismaModel> | number
+    _count?: NestedIntFilter<$PrismaModel>
+    _avg?: NestedFloatFilter<$PrismaModel>
+    _sum?: NestedIntFilter<$PrismaModel>
+    _min?: NestedIntFilter<$PrismaModel>
+    _max?: NestedIntFilter<$PrismaModel>
   }
 
   export type FloatWithAggregatesFilter<$PrismaModel = never> = {
@@ -9191,8 +9088,6 @@ export namespace Prisma {
 
   export type PesananAvgOrderByAggregateInput = {
     jumlahProduk?: SortOrder
-    pembeliId?: SortOrder
-    penjualId?: SortOrder
   }
 
   export type PesananMaxOrderByAggregateInput = {
@@ -9215,8 +9110,6 @@ export namespace Prisma {
 
   export type PesananSumOrderByAggregateInput = {
     jumlahProduk?: SortOrder
-    pembeliId?: SortOrder
-    penjualId?: SortOrder
   }
 
   export type DateTimeWithAggregatesFilter<$PrismaModel = never> = {
@@ -9256,7 +9149,6 @@ export namespace Prisma {
     id?: SortOrder
     harga?: SortOrder
     stock?: SortOrder
-    penjualId?: SortOrder
   }
 
   export type ProdukMaxOrderByAggregateInput = {
@@ -9285,7 +9177,6 @@ export namespace Prisma {
     id?: SortOrder
     harga?: SortOrder
     stock?: SortOrder
-    penjualId?: SortOrder
   }
 
   export type PesananScalarRelationFilter = {
@@ -9384,14 +9275,6 @@ export namespace Prisma {
     update?: PesananUpdateWithWhereUniqueWithoutPembeliInput | PesananUpdateWithWhereUniqueWithoutPembeliInput[]
     updateMany?: PesananUpdateManyWithWhereWithoutPembeliInput | PesananUpdateManyWithWhereWithoutPembeliInput[]
     deleteMany?: PesananScalarWhereInput | PesananScalarWhereInput[]
-  }
-
-  export type IntFieldUpdateOperationsInput = {
-    set?: number
-    increment?: number
-    decrement?: number
-    multiply?: number
-    divide?: number
   }
 
   export type PembayaranUncheckedUpdateManyWithoutPembeliNestedInput = {
@@ -9526,6 +9409,14 @@ export namespace Prisma {
     upsert?: PembeliUpsertWithoutPembayaranInput
     connect?: PembeliWhereUniqueInput
     update?: XOR<XOR<PembeliUpdateToOneWithWhereWithoutPembayaranInput, PembeliUpdateWithoutPembayaranInput>, PembeliUncheckedUpdateWithoutPembayaranInput>
+  }
+
+  export type IntFieldUpdateOperationsInput = {
+    set?: number
+    increment?: number
+    decrement?: number
+    multiply?: number
+    divide?: number
   }
 
   export type PembeliCreateNestedOneWithoutPesananInput = {
@@ -9690,17 +9581,6 @@ export namespace Prisma {
     update?: XOR<XOR<ProdukUpdateToOneWithWhereWithoutPesananProdukInput, ProdukUpdateWithoutPesananProdukInput>, ProdukUncheckedUpdateWithoutPesananProdukInput>
   }
 
-  export type NestedIntFilter<$PrismaModel = never> = {
-    equals?: number | IntFieldRefInput<$PrismaModel>
-    in?: number[] | ListIntFieldRefInput<$PrismaModel>
-    notIn?: number[] | ListIntFieldRefInput<$PrismaModel>
-    lt?: number | IntFieldRefInput<$PrismaModel>
-    lte?: number | IntFieldRefInput<$PrismaModel>
-    gt?: number | IntFieldRefInput<$PrismaModel>
-    gte?: number | IntFieldRefInput<$PrismaModel>
-    not?: NestedIntFilter<$PrismaModel> | number
-  }
-
   export type NestedStringFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel>
     in?: string[] | ListStringFieldRefInput<$PrismaModel>
@@ -9713,33 +9593,6 @@ export namespace Prisma {
     startsWith?: string | StringFieldRefInput<$PrismaModel>
     endsWith?: string | StringFieldRefInput<$PrismaModel>
     not?: NestedStringFilter<$PrismaModel> | string
-  }
-
-  export type NestedIntWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: number | IntFieldRefInput<$PrismaModel>
-    in?: number[] | ListIntFieldRefInput<$PrismaModel>
-    notIn?: number[] | ListIntFieldRefInput<$PrismaModel>
-    lt?: number | IntFieldRefInput<$PrismaModel>
-    lte?: number | IntFieldRefInput<$PrismaModel>
-    gt?: number | IntFieldRefInput<$PrismaModel>
-    gte?: number | IntFieldRefInput<$PrismaModel>
-    not?: NestedIntWithAggregatesFilter<$PrismaModel> | number
-    _count?: NestedIntFilter<$PrismaModel>
-    _avg?: NestedFloatFilter<$PrismaModel>
-    _sum?: NestedIntFilter<$PrismaModel>
-    _min?: NestedIntFilter<$PrismaModel>
-    _max?: NestedIntFilter<$PrismaModel>
-  }
-
-  export type NestedFloatFilter<$PrismaModel = never> = {
-    equals?: number | FloatFieldRefInput<$PrismaModel>
-    in?: number[] | ListFloatFieldRefInput<$PrismaModel>
-    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel>
-    lt?: number | FloatFieldRefInput<$PrismaModel>
-    lte?: number | FloatFieldRefInput<$PrismaModel>
-    gt?: number | FloatFieldRefInput<$PrismaModel>
-    gte?: number | FloatFieldRefInput<$PrismaModel>
-    not?: NestedFloatFilter<$PrismaModel> | number
   }
 
   export type NestedStringWithAggregatesFilter<$PrismaModel = never> = {
@@ -9757,6 +9610,44 @@ export namespace Prisma {
     _count?: NestedIntFilter<$PrismaModel>
     _min?: NestedStringFilter<$PrismaModel>
     _max?: NestedStringFilter<$PrismaModel>
+  }
+
+  export type NestedIntFilter<$PrismaModel = never> = {
+    equals?: number | IntFieldRefInput<$PrismaModel>
+    in?: number[] | ListIntFieldRefInput<$PrismaModel>
+    notIn?: number[] | ListIntFieldRefInput<$PrismaModel>
+    lt?: number | IntFieldRefInput<$PrismaModel>
+    lte?: number | IntFieldRefInput<$PrismaModel>
+    gt?: number | IntFieldRefInput<$PrismaModel>
+    gte?: number | IntFieldRefInput<$PrismaModel>
+    not?: NestedIntFilter<$PrismaModel> | number
+  }
+
+  export type NestedFloatFilter<$PrismaModel = never> = {
+    equals?: number | FloatFieldRefInput<$PrismaModel>
+    in?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    lt?: number | FloatFieldRefInput<$PrismaModel>
+    lte?: number | FloatFieldRefInput<$PrismaModel>
+    gt?: number | FloatFieldRefInput<$PrismaModel>
+    gte?: number | FloatFieldRefInput<$PrismaModel>
+    not?: NestedFloatFilter<$PrismaModel> | number
+  }
+
+  export type NestedIntWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: number | IntFieldRefInput<$PrismaModel>
+    in?: number[] | ListIntFieldRefInput<$PrismaModel>
+    notIn?: number[] | ListIntFieldRefInput<$PrismaModel>
+    lt?: number | IntFieldRefInput<$PrismaModel>
+    lte?: number | IntFieldRefInput<$PrismaModel>
+    gt?: number | IntFieldRefInput<$PrismaModel>
+    gte?: number | IntFieldRefInput<$PrismaModel>
+    not?: NestedIntWithAggregatesFilter<$PrismaModel> | number
+    _count?: NestedIntFilter<$PrismaModel>
+    _avg?: NestedFloatFilter<$PrismaModel>
+    _sum?: NestedIntFilter<$PrismaModel>
+    _min?: NestedIntFilter<$PrismaModel>
+    _max?: NestedIntFilter<$PrismaModel>
   }
 
   export type NestedFloatWithAggregatesFilter<$PrismaModel = never> = {
@@ -9846,7 +9737,7 @@ export namespace Prisma {
     jumlahProduk: number
     tanggal?: Date | string
     status: boolean
-    penjualId: number
+    penjualId: string
     pesananProduk?: PesananProdukUncheckedCreateNestedManyWithoutPesananInput
   }
 
@@ -9882,7 +9773,7 @@ export namespace Prisma {
     NOT?: PembayaranScalarWhereInput | PembayaranScalarWhereInput[]
     id?: IntFilter<"Pembayaran"> | number
     jumlah?: FloatFilter<"Pembayaran"> | number
-    pembeliId?: IntFilter<"Pembayaran"> | number
+    pembeliId?: StringFilter<"Pembayaran"> | string
   }
 
   export type PesananUpsertWithWhereUniqueWithoutPembeliInput = {
@@ -9909,8 +9800,8 @@ export namespace Prisma {
     jumlahProduk?: IntFilter<"Pesanan"> | number
     tanggal?: DateTimeFilter<"Pesanan"> | Date | string
     status?: BoolFilter<"Pesanan"> | boolean
-    pembeliId?: IntFilter<"Pesanan"> | number
-    penjualId?: IntFilter<"Pesanan"> | number
+    pembeliId?: StringFilter<"Pesanan"> | string
+    penjualId?: StringFilter<"Pesanan"> | string
   }
 
   export type PesananCreateWithoutPenjualInput = {
@@ -9927,7 +9818,7 @@ export namespace Prisma {
     jumlahProduk: number
     tanggal?: Date | string
     status: boolean
-    pembeliId: number
+    pembeliId: string
     pesananProduk?: PesananProdukUncheckedCreateNestedManyWithoutPesananInput
   }
 
@@ -10013,19 +9904,20 @@ export namespace Prisma {
     harga?: IntFilter<"Produk"> | number
     jenis?: StringFilter<"Produk"> | string
     stock?: IntFilter<"Produk"> | number
-    penjualId?: IntFilter<"Produk"> | number
+    penjualId?: StringFilter<"Produk"> | string
     tanggalDibuat?: DateTimeFilter<"Produk"> | Date | string
     diperbarui?: DateTimeFilter<"Produk"> | Date | string
   }
 
   export type PembeliCreateWithoutPembayaranInput = {
+    id: string
     username: string
     role: string
     pesanan?: PesananCreateNestedManyWithoutPembeliInput
   }
 
   export type PembeliUncheckedCreateWithoutPembayaranInput = {
-    id?: number
+    id: string
     username: string
     role: string
     pesanan?: PesananUncheckedCreateNestedManyWithoutPembeliInput
@@ -10048,26 +9940,28 @@ export namespace Prisma {
   }
 
   export type PembeliUpdateWithoutPembayaranInput = {
+    id?: StringFieldUpdateOperationsInput | string
     username?: StringFieldUpdateOperationsInput | string
     role?: StringFieldUpdateOperationsInput | string
     pesanan?: PesananUpdateManyWithoutPembeliNestedInput
   }
 
   export type PembeliUncheckedUpdateWithoutPembayaranInput = {
-    id?: IntFieldUpdateOperationsInput | number
+    id?: StringFieldUpdateOperationsInput | string
     username?: StringFieldUpdateOperationsInput | string
     role?: StringFieldUpdateOperationsInput | string
     pesanan?: PesananUncheckedUpdateManyWithoutPembeliNestedInput
   }
 
   export type PembeliCreateWithoutPesananInput = {
+    id: string
     username: string
     role: string
     pembayaran?: PembayaranCreateNestedManyWithoutPembeliInput
   }
 
   export type PembeliUncheckedCreateWithoutPesananInput = {
-    id?: number
+    id: string
     username: string
     role: string
     pembayaran?: PembayaranUncheckedCreateNestedManyWithoutPembeliInput
@@ -10079,14 +9973,14 @@ export namespace Prisma {
   }
 
   export type PenjualCreateWithoutPesananInput = {
-    id: number
+    id: string
     username: string
     role: string
     produk?: ProdukCreateNestedManyWithoutPenjualInput
   }
 
   export type PenjualUncheckedCreateWithoutPesananInput = {
-    id: number
+    id: string
     username: string
     role: string
     produk?: ProdukUncheckedCreateNestedManyWithoutPenjualInput
@@ -10127,13 +10021,14 @@ export namespace Prisma {
   }
 
   export type PembeliUpdateWithoutPesananInput = {
+    id?: StringFieldUpdateOperationsInput | string
     username?: StringFieldUpdateOperationsInput | string
     role?: StringFieldUpdateOperationsInput | string
     pembayaran?: PembayaranUpdateManyWithoutPembeliNestedInput
   }
 
   export type PembeliUncheckedUpdateWithoutPesananInput = {
-    id?: IntFieldUpdateOperationsInput | number
+    id?: StringFieldUpdateOperationsInput | string
     username?: StringFieldUpdateOperationsInput | string
     role?: StringFieldUpdateOperationsInput | string
     pembayaran?: PembayaranUncheckedUpdateManyWithoutPembeliNestedInput
@@ -10151,14 +10046,14 @@ export namespace Prisma {
   }
 
   export type PenjualUpdateWithoutPesananInput = {
-    id?: IntFieldUpdateOperationsInput | number
+    id?: StringFieldUpdateOperationsInput | string
     username?: StringFieldUpdateOperationsInput | string
     role?: StringFieldUpdateOperationsInput | string
     produk?: ProdukUpdateManyWithoutPenjualNestedInput
   }
 
   export type PenjualUncheckedUpdateWithoutPesananInput = {
-    id?: IntFieldUpdateOperationsInput | number
+    id?: StringFieldUpdateOperationsInput | string
     username?: StringFieldUpdateOperationsInput | string
     role?: StringFieldUpdateOperationsInput | string
     produk?: ProdukUncheckedUpdateManyWithoutPenjualNestedInput
@@ -10189,14 +10084,14 @@ export namespace Prisma {
   }
 
   export type PenjualCreateWithoutProdukInput = {
-    id: number
+    id: string
     username: string
     role: string
     pesanan?: PesananCreateNestedManyWithoutPenjualInput
   }
 
   export type PenjualUncheckedCreateWithoutProdukInput = {
-    id: number
+    id: string
     username: string
     role: string
     pesanan?: PesananUncheckedCreateNestedManyWithoutPenjualInput
@@ -10237,14 +10132,14 @@ export namespace Prisma {
   }
 
   export type PenjualUpdateWithoutProdukInput = {
-    id?: IntFieldUpdateOperationsInput | number
+    id?: StringFieldUpdateOperationsInput | string
     username?: StringFieldUpdateOperationsInput | string
     role?: StringFieldUpdateOperationsInput | string
     pesanan?: PesananUpdateManyWithoutPenjualNestedInput
   }
 
   export type PenjualUncheckedUpdateWithoutProdukInput = {
-    id?: IntFieldUpdateOperationsInput | number
+    id?: StringFieldUpdateOperationsInput | string
     username?: StringFieldUpdateOperationsInput | string
     role?: StringFieldUpdateOperationsInput | string
     pesanan?: PesananUncheckedUpdateManyWithoutPenjualNestedInput
@@ -10280,8 +10175,8 @@ export namespace Prisma {
     jumlahProduk: number
     tanggal?: Date | string
     status: boolean
-    pembeliId: number
-    penjualId: number
+    pembeliId: string
+    penjualId: string
   }
 
   export type PesananCreateOrConnectWithoutPesananProdukInput = {
@@ -10305,7 +10200,7 @@ export namespace Prisma {
     harga: number
     jenis: string
     stock: number
-    penjualId: number
+    penjualId: string
     tanggalDibuat?: Date | string
     diperbarui?: Date | string
   }
@@ -10340,8 +10235,8 @@ export namespace Prisma {
     jumlahProduk?: IntFieldUpdateOperationsInput | number
     tanggal?: DateTimeFieldUpdateOperationsInput | Date | string
     status?: BoolFieldUpdateOperationsInput | boolean
-    pembeliId?: IntFieldUpdateOperationsInput | number
-    penjualId?: IntFieldUpdateOperationsInput | number
+    pembeliId?: StringFieldUpdateOperationsInput | string
+    penjualId?: StringFieldUpdateOperationsInput | string
   }
 
   export type ProdukUpsertWithoutPesananProdukInput = {
@@ -10371,7 +10266,7 @@ export namespace Prisma {
     harga?: IntFieldUpdateOperationsInput | number
     jenis?: StringFieldUpdateOperationsInput | string
     stock?: IntFieldUpdateOperationsInput | number
-    penjualId?: IntFieldUpdateOperationsInput | number
+    penjualId?: StringFieldUpdateOperationsInput | string
     tanggalDibuat?: DateTimeFieldUpdateOperationsInput | Date | string
     diperbarui?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -10386,7 +10281,7 @@ export namespace Prisma {
     jumlahProduk: number
     tanggal?: Date | string
     status: boolean
-    penjualId: number
+    penjualId: string
   }
 
   export type PembayaranUpdateWithoutPembeliInput = {
@@ -10417,7 +10312,7 @@ export namespace Prisma {
     jumlahProduk?: IntFieldUpdateOperationsInput | number
     tanggal?: DateTimeFieldUpdateOperationsInput | Date | string
     status?: BoolFieldUpdateOperationsInput | boolean
-    penjualId?: IntFieldUpdateOperationsInput | number
+    penjualId?: StringFieldUpdateOperationsInput | string
     pesananProduk?: PesananProdukUncheckedUpdateManyWithoutPesananNestedInput
   }
 
@@ -10426,7 +10321,7 @@ export namespace Prisma {
     jumlahProduk?: IntFieldUpdateOperationsInput | number
     tanggal?: DateTimeFieldUpdateOperationsInput | Date | string
     status?: BoolFieldUpdateOperationsInput | boolean
-    penjualId?: IntFieldUpdateOperationsInput | number
+    penjualId?: StringFieldUpdateOperationsInput | string
   }
 
   export type PesananCreateManyPenjualInput = {
@@ -10434,7 +10329,7 @@ export namespace Prisma {
     jumlahProduk: number
     tanggal?: Date | string
     status: boolean
-    pembeliId: number
+    pembeliId: string
   }
 
   export type ProdukCreateManyPenjualInput = {
@@ -10461,7 +10356,7 @@ export namespace Prisma {
     jumlahProduk?: IntFieldUpdateOperationsInput | number
     tanggal?: DateTimeFieldUpdateOperationsInput | Date | string
     status?: BoolFieldUpdateOperationsInput | boolean
-    pembeliId?: IntFieldUpdateOperationsInput | number
+    pembeliId?: StringFieldUpdateOperationsInput | string
     pesananProduk?: PesananProdukUncheckedUpdateManyWithoutPesananNestedInput
   }
 
@@ -10470,7 +10365,7 @@ export namespace Prisma {
     jumlahProduk?: IntFieldUpdateOperationsInput | number
     tanggal?: DateTimeFieldUpdateOperationsInput | Date | string
     status?: BoolFieldUpdateOperationsInput | boolean
-    pembeliId?: IntFieldUpdateOperationsInput | number
+    pembeliId?: StringFieldUpdateOperationsInput | string
   }
 
   export type ProdukUpdateWithoutPenjualInput = {

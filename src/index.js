@@ -144,7 +144,7 @@ app.post("/user", async (req, res) => {
 
     try {
         const existing = await prisma.pembeli.findUnique({
-            where: { id: parseInt(id) },
+            where: { id },
         });
         if (existing) {
             return res.json({ message: "Profil sudah ada" }); // bisa di improve lagi
@@ -169,7 +169,7 @@ app.post("/admin", async (req, res) => {
 
     try {
         const existing = await prisma.penjual.findUnique({
-            where: { id: parseInt(id) },
+            where: { id },
         });
         if (existing) {
             return res.json({ message: "Profil sudah ada" }); // bisa di improve lagi
