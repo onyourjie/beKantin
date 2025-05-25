@@ -127,7 +127,7 @@ app.get("/user/:id", async (req, res) => {
 
     try {
         const existing = await prisma.pembeli.findUnique({
-            where: { id },
+            where: { id: userId },
         });
         if (!existing) {
             return res.status(404).json({ message: "User not found" });
