@@ -2,6 +2,8 @@ const express = require("express");
 const dotenv = require("dotenv");
 const { PrismaClient } = require("./generated/prisma");
 const cors = require("cors");
+const cloudinary = require("./utils/cloudinary");
+const upload = require("./middleware/multer");
 
 dotenv.config();
 const prisma = new PrismaClient();
@@ -80,11 +82,17 @@ app.delete("/products/:id", async (req, res) => {
 });
 
 //3
-app.put("/products/:id", async (req, res) => {
+app.put("/products/:id", upload.single("image"), async (req, res) => {
     const productId = req.params.id;
     const { nama, harga, jenis, stock } = req.body;
 
     try {
+        if (!req.file) {
+            return res.status(400).json({ error: "No image file uploaded" });
+        }
+
+        const result = await cloudinary.uploader.upload(req.file.path);
+
         const product = await prisma.produk.update({
             where: { id: parseInt(productId) },
             data: {
@@ -92,6 +100,7 @@ app.put("/products/:id", async (req, res) => {
                 harga,
                 jenis,
                 stock,
+                gambarUrl: result.secure_url,
                 penjualId: "aa",
             },
         });
@@ -103,21 +112,28 @@ app.put("/products/:id", async (req, res) => {
 });
 
 //4
-app.post("/products", async (req, res) => {
+app.post("/products", upload.single("image"), async (req, res) => {
     const { nama, harga, jenis, stock } = req.body;
 
     try {
-        const products = await prisma.produk.create({
+        if (!req.file) {
+            return res.status(400).json({ error: "No image file uploaded" });
+        }
+
+        const result = await cloudinary.uploader.upload(req.file.path);
+
+        const product = await prisma.produk.create({
             data: {
                 nama,
                 harga,
                 jenis,
                 stock,
+                gambarUrl: result.secure_url,
                 penjualId: "aa",
             },
         });
 
-        res.json({ message: "Berhasil tambah produk", products });
+        res.json({ message: "Berhasil tambah produk", product });
     } catch (error) {
         res.status(500).json({ error: error.message });
     }

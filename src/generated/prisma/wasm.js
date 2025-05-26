@@ -153,6 +153,7 @@ exports.Prisma.ProdukScalarFieldEnum = {
   harga: 'harga',
   jenis: 'jenis',
   stock: 'stock',
+  gambarUrl: 'gambarUrl',
   penjualId: 'penjualId',
   tanggalDibuat: 'tanggalDibuat',
   diperbarui: 'diperbarui'
@@ -171,6 +172,11 @@ exports.Prisma.SortOrder = {
 exports.Prisma.QueryMode = {
   default: 'default',
   insensitive: 'insensitive'
+};
+
+exports.Prisma.NullsOrder = {
+  first: 'first',
+  last: 'last'
 };
 
 
